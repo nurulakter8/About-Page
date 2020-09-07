@@ -1,5 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:lesson1creative/startscreen.dart';
+import 'package:lesson1creative/screens/gridviewscreen.dart';
+import 'package:lesson1creative/screens/listviewscreen.dart';
+import 'package:lesson1creative/screens/profilescreen.dart';
+import 'package:lesson1creative/screens/slideshowscreen.dart';
+import 'package:lesson1creative/screens/startscreen.dart';
 
 void main() {
   runApp(Lesson1AppCreative()) ;
@@ -13,11 +17,21 @@ class Lesson1AppCreative extends StatelessWidget{
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
         brightness: Brightness.light,
-
+        primaryColor: Colors.white,
+        textTheme: TextTheme(
+          headline5: TextStyle(fontSize: 72 ),   //heading
+          headline6: TextStyle(fontSize: 23 ),  //title
+          bodyText1: TextStyle(fontSize: 15 , fontWeight: FontWeight.bold),   //body1
+          bodyText2: TextStyle(fontSize: 15 , letterSpacing: 5),   //body2
+        ),
       ),
       initialRoute: StartScreen.routName,
       routes: {
         StartScreen.routName : (context) => StartScreen(),
+        ProfileScreen.routName : (context) => ProfileScreen(),
+        GridViewScreen.routName : (context) => GridViewScreen(),
+        ListViewScreen.routName : (context) => ListViewScreen(),
+        SlideShowScreen.routName : (context) => SlideShowScreen(),
       },
     );
   }
