@@ -144,7 +144,7 @@ class ProfileScreen extends StatelessWidget {
           ),
         ),
       ),
-      drawer: Drawer(
+      endDrawer: Drawer(
         child: ListView(
           padding: EdgeInsets.zero,
           children: <Widget>[
